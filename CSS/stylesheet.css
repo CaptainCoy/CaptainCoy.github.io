@@ -1,0 +1,328 @@
+
+html {
+    background: url(../media/bavaria.jpg);
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(79, 82, 82, 0.883);    
+    color: rgb(23, 197, 197);   
+}
+
+section {
+    padding-top: 50px;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 6vw;    
+}
+
+button {
+    background-color: rgb(9, 97, 85);
+    color:rgb(240, 189, 95);
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.699);
+    padding: 10px;
+    border-radius: 50px;
+}
+
+button:hover {
+    background-color: rgb(73, 143, 4);
+    color:rgb(241, 167, 30);
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.699);
+    cursor: pointer;
+}
+
+/*==========================================
+        `   NavBar 
+=========================================*/
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(107, 101, 90, 0.87);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.nbli {
+    float: left;
+}
+
+.nbli a {
+    display: block;
+    color:rgb(6, 62, 182);    
+    text-align: center;
+    text-shadow: 1px 3px rgb(216, 9, 9);
+    padding: 12px 15px;
+    text-decoration: rgb(5, 4, 3);
+    background-color: rgba(107, 101, 90, 0.87);
+}
+
+.nbli a:hover {
+    background-color: rgba(241, 167, 30, 0.514);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+/*=========================================
+            End NavBar
+=========================================*/
+
+
+div {
+    display: block;
+}
+
+#home {
+    background: url(../media/jazz_captain.jpg) no-repeat 50% 50%;    
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    display: block;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color:rgb(90, 129, 127);
+}
+
+.main-head {
+    text-shadow: 2px 5px 6px rgba(216, 152, 32, 0.9);
+    font-variant: small-caps;
+    background-color: rgba(23, 197, 197, 0.116);
+    color:rgba(90, 129, 127, 0.8);
+    letter-spacing: 8pt;
+    word-spacing: 30pt;
+    font-size: 6cm;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 3;
+    font-weight: 900;
+    border: 5px groove darkolivegreen;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.main-head:hover {
+    border: 7px dotted rgb(255, 230, 0);
+    border-radius: 25px;
+}
+
+.center { 
+    text-align: center;    
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.column {
+    width: 75% 25%;
+   flex: auto;
+    padding: 25px;
+    border: 3px solid darkolivegreen;
+    border-radius: 15px;
+    background-color: rgba(9, 81, 105, 0.5);
+}
+
+.column:hover {
+    border: 5px dotted rgb(255, 230, 0);
+}
+
+.container {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* =================================================
+                GitHub section
+================================================= */
+
+#git {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ820ETIz-RdCjY6vN7Xot355BX4T4hrmx96A&usqp=CAU) no-repeat;
+    background-attachment: initial;
+    -webkit-background-size: cover;
+    background-size: cover; 
+    color:rgb(112, 239, 243); 
+    text-shadow: 1px 2px rgb(12, 51, 46);  
+    width: auto;   
+    padding: 35px;
+}
+
+.gitBox {
+    background-color: rgba(128, 105, 56, 0.726);  
+    border-radius: 30px; 
+    padding: 25px;
+    margin: auto;
+    text-align: center;
+}
+
+.gitstyle {
+    color:rgb(241, 167, 30);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.gitstyle:hover {
+    color:rgb(194, 255, 81);
+}
+
+/* =============================================
+            About
+============================================= */
+
+.about {
+    background-color: rgba(128, 105, 56, 0.726); 
+    color: rgb(112, 239, 243); 
+    text-shadow: 1px 2px rgb(12, 51, 46);
+    border-radius: 30px; 
+    padding: 25px;
+    margin: auto; 
+    text-align: center;
+}
+
+#li1, #li2, #li3, #li4, #li5 {
+    display: none;
+}
+
+/*===============================================
+            Contact
+===============================================*/
+
+input[type=text], input[type=email] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(45, 90, 4);
+    border-radius: 10px;
+    background-color: #88e0e027;
+    color:rgb(23, 197, 197);
+    font-size: 16px;
+  }
+
+input[type=text]:hover, input[type=email]:hover {
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+textarea {
+    width: 60%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(45, 90, 4);
+    border-radius: 10px;
+    background-color: #88e0e027;
+    color:rgb(23, 197, 197);
+    font-size: 16px;
+    resize: none;
+  }
+
+textarea:hover {
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+input[type=submit] {
+    background-color: rgb(9, 97, 85);
+    color:rgb(240, 189, 95);
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.699);
+    padding: 20px;
+    border-radius: 50px;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(73, 143, 4);
+    color:rgb(241, 167, 30);
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.699);
+    cursor: pointer;
+}
+
+.form-container {
+    width: 666px;
+    border: 4px soild rgba(9, 81, 105, 0.7);
+    border-radius: 15px;
+    padding: 25px;
+    background: url(../media/stalegap.jpg) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: rgb(241, 167, 30);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+ /* Button used to open the contact form - fixed at the bottom of the page */
+ .open-button {
+    background-color: rgb(9, 97, 85); 
+    color: rgb(240, 189, 95);
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #311515;
+    border-radius: 15px;
+    z-index: 9;
+}
+
+/* Add a background color to the cancel button */
+.cancel {
+    background-color: rgb(119, 16, 16);
+    color:rgb(240, 189, 95);
+    padding: 20px;
+    border-radius: 50px;
+}
+
+
+
+/* ====================================================
+            Bonus Section
+==================================================== */
+
+iframe {
+    border-radius: 15px;
+}
+
+/* =====================================================
+                Footer
+===================================================== */
+
+.butt {
+    background-color: rgba(107, 101, 90, 0.87);
+    color: rgba(107, 101, 90, 0.87);
+    text-align: center;
+}
+
+.butt:hover {
+    color: rgb(241, 167, 30);
+}
+
+
+
+
+
+
+ 
+

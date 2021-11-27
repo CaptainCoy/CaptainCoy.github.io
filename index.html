@@ -1,16 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     
   <head>
     
     <meta charset="utf-8"> 
-    <link rel="icon" href="./HTML_and_CSS_Projects/Favicons/favicon-16x16.png" type="image/png" sizes="16x16">   
+    <link rel="icon" href="media/favicon-16x16.png" type="image/png" sizes="16x16">   
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <title>Alex Coy</title>
+
   </head>
 
   <body> 
+
+    <script>
+
+      document.body.classList.add('fade-out'); 
+
+    </script>
       
     <!-- Nav Bar-->       
     <ul class="navbar">
@@ -21,7 +30,7 @@
             <a class="nbactive" href="#git">GitHub</a>
         </li>
         <li class="nbli">
-            <a class="nbactive" href="#contact">Contact</a>
+            <a class="nbactive" onclick="openForm()">Contact</a>
         </li>
         <li class="nbli">
             <a class="nbactive" href="#extra">Extra</a>
@@ -40,61 +49,78 @@
       <!-- End Home -->
 
       <!-- GitHub -->
-      <div id="git">
-        <div class="center">
-          <h1>Projects</h1>
-        </div>       
-        <div class="row">          
-          <div class="column">
-              <h1 class="center">GitHub</h1>
-              <p class="center">You can take a look at all of the projects I've been working on here:
-                <br>
-                  <a class="gitstyle" href="https://github.com/CaptainCoy">CaptainCoy</a>
-              </p>
-          </div>
-          <div class="column">
-            <div class="center">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ820ETIz-RdCjY6vN7Xot355BX4T4hrmx96A&usqp=CAU" alt="GitHub">                     
-            </div>        
-          </div>            
-      </div>
-      <!-- End GitHub -->
+      <section>
+        <div class="container">
+          <div class="center">
+            <h1>About</h1>
+          </div>       
+          <div class="row">          
+            <div id="git" class="column">
+              <div class="gitBox">            
+                <p class="center">You can take a look at all of the projects I've been working on here:</p>                
+                  <a class="gitstyle" href="https://github.com/CaptainCoy">CaptainCoy</a>              
+              </div>
+            </div>
+          <!-- End GitHub -->
 
-      <!-- Contact -->
-      <div id= "contact" class="container">
-        <div class="center">
-          <h1>Contact Me</h1>
-          <div class="form-container">
-            <form action="https://formspree.io/f/xgerqlyr" method="post">              
-                <label for="full-name">Full Name:</label>
-                  <input type="text" name="name" id="full-name" placeholder="First and Last" required=""><br>
-                <label for="email-address">Email Address:</label>
-                  <input type="email" name="_replyto" id="email-address" placeholder="you@you.com" required=""><br>
-                <label for="message">Message:</label>
-                  <textarea rows="3" name="message" id="message" placeholder="Send me a message." required=""></textarea><br>
-                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">              
-              <input type="submit" value="Send It">
-            </form>
+          <!-- About -->
+            <div class="column">
+              <div class="center">
+                <h2>Who am I?</h2>
+              </div>
+                <br>                
+                <ul>
+                  <li>Comedian</li>                
+                  <li>Business Owner</li>
+                  <li>Kettlebell Enthusiast</li>
+                  <li>Poodleman</li>
+                  <li>Future Programer</li>
+                </ul>              
+            </div>
+      </section>
+      <br>
+      <!-- End About -->
+
+      <!-- Extra -->
+      <section>
+        <div class="container">
+          <div class="center">
+            <h1 id="extra">Bonus Material</h1>
+            <br>
+            <iframe class="center" src="https://www.facebook.com/plugins/video.php?muted=1&autoplay=1&height=420&href=https%3A%2F%2Fwww.facebook.com%2Fcorbett.simon%2Fvideos%2F1859990696128%2F&show_text=false&width=560&t=45" width="560" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
           </div>
         </div>
+      </section>
+
+      <!-- Contact -->  
+      <button class="open-button" onclick="openForm()">Contact Me</button>     
+      <div class="form-popup" id="myForm">          
+        <form action="https://formspree.io/f/xgerqlyr" method="post" class="form-container">              
+          <label for="full-name">Full Name:</label><br>
+            <input type="text" name="name" id="full-name" placeholder="First and Last" required=""><br>
+          <label for="email-address">Email Address:</label><br>
+            <input type="email" name="_replyto" id="email-address" placeholder="you@you.com" required=""><br>
+          <label for="message">Message:</label><br>
+            <textarea rows="3" name="message" id="message" placeholder="Send me a message." required=""></textarea><br>
+          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission"><br>              
+            <input type="submit" value="Send It">
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>                         
       </div>
       <!-- End Contact -->
+      
+      <!-- Footer -->
+      <h4 class="butt">It's not what it's cracked up to be, it's what you make it.</h4>
+      <!-- End Footer -->
 
-      <!-- Bonus Section -->
-      <div id="extra"> 
-          <h1 class="center">Bonus Material</h1>
-        <div class="row">
-            <div class="column"  style="background-color: rgba(18, 110, 153, 0.3);">
-                <iframe class="center" src="https://www.facebook.com/plugins/video.php?muted=1&autoplay=1&height=420&href=https%3A%2F%2Fwww.facebook.com%2Fcorbett.simon%2Fvideos%2F1859990696128%2F&show_text=false&width=560&t=49" width="560" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-            </div>
-            <div class="column" style="background-color: rgba(18, 110, 153, 0.3);">
-                <iframe class="center" src="https://player.vimeo.com/video/31011728?h=fb3c52e14d&autoplay=1&muted=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>            
-        </div>
-        <!-- End Bonus Section --> 
-        
-        <!-- Footer -->
-        <h1 class="center">It's not what it's cracked up to be, it's what you make it.</h1>
-        <!-- End Footer -->         
+    <script>
+
+      window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.remove('fade-out');
+        });
+
+    </script>
+    <script src="JavaScript/JS.js"></script>
+
   </body>
 </html>
