@@ -22,7 +22,10 @@ section {
 }
 
 h1 {
-    font-size: 6vw;    
+    font-size: 6vw;
+    position: relative;
+    -webkit-animation: moveH1 4s; /* Safari */
+    animation: moveH1 4s;    
 }
 
 button {
@@ -40,18 +43,38 @@ button:hover {
     cursor: pointer;
 }
 
+@keyframes moveH1 {
+    from {left: -100vw;} /* The h1 element is starting off screen to the left */
+    to { left: 0vw;} /* This moves the h1 element into place on the screen */
+}
+
 /*==========================================
         `   NavBar 
 =========================================*/
+
+/* The animation effect for moving the nav bar in from above the left of the screen on page load */
+@keyframes moveNav {
+    from {left: -100vw;} /* The navbar is starting off screen to the left */
+    to { left: 0vw;} /* This moves the navbar into place on the screen */
+}
+
 .navbar {
     list-style-type: none;
+    width: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: rgba(107, 101, 90, 0.87);
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
+    -webkit-animation: moveNav 3s; /* Safari */
+    animation: moveNav 3s; /* This makes the moveNav animation last 3 seconds */
+}
+
+/* The animation effect for moving the nav bar links in from above the top of the screen on page load */
+@keyframes moveNavText {
+    from {top: -100vw;} /* This sets the navbar text 100% above the viewport */
+    to {top: 0vw;} /* This lowers the navbar text onto the navbar */
 }
 
 .nbli {
@@ -59,19 +82,26 @@ button:hover {
 }
 
 .nbli a {
+    float: left;
     display: block;
-    color:rgb(6, 62, 182);    
+    color:rgb(6, 62, 182); 
+    padding: 1vw;   
     text-align: center;
     text-shadow: 1px 3px rgb(216, 9, 9);
     padding: 12px 15px;
     text-decoration: rgb(5, 4, 3);
     background-color: rgba(107, 101, 90, 0.87);
+    position: relative;
+    -webkit-animation: moveNavText 4s; /* Animation for Safari */
+    animation: moveNavText 4s; /* Applies the moveNavText animation for 4s */ 
 }
+
 
 .nbli a:hover {
     background-color: rgba(241, 167, 30, 0.514);
     text-shadow: none;
     cursor: pointer;
+    transition: 0.5s ease-in;
 }
 
 /*=========================================
@@ -119,7 +149,8 @@ div {
 }
 
 .center { 
-    text-align: center;    
+    text-align: center; 
+    margin: auto;   
 }
 
 .row {
@@ -131,7 +162,7 @@ div {
     width: 75% 25%;
    flex: auto;
     padding: 25px;
-    border: 3px solid darkolivegreen;
+    border: 3px solid rgb(63, 87, 21);
     border-radius: 15px;
     background-color: rgba(9, 81, 105, 0.5);
 }
@@ -196,6 +227,85 @@ div {
 #li1, #li2, #li3, #li4, #li5 {
     display: none;
 }
+
+.aboutStyle {
+    color:rgb(23, 197, 197);
+    text-shadow: 1px 2px rgb(12, 51, 46); 
+}
+
+.aboutStyle:hover {
+    color: rgb(241, 167, 30);
+}
+
+/***** Slideshow Styling *****/
+#Slideshow_Background {
+    background: rgba(13, 83, 88, 0.35); 
+    border-radius: 15px;
+}
+
+.mySlides{
+    display: none; /* This prevents the images from being displayed, we will use JS to display these */
+}
+
+/* Slideshow section / container */
+#Slideshow_Container {
+    width: 39.5vw; /* Relative sizing of the container for the slidewshow set to 39.5% of the viewport width */
+    height: auto; /* The height of the container is automatically adjusted based on the content it is displaying */
+    padding-top: 4%; /* Adds a small padding to the top of the slideshow container */
+    position: relative; /* This sets the container relative to its normal positioning */
+    margin:auto; /* This will horizontally center the container on the page */
+}
+
+/* Remove the underline from the previous and next buttons on the slideshow */
+#Slideshow_Container a {
+    text-decoration: none;
+}
+
+/* Images contained within the slideshow */
+.Slideshow_Images {
+    vertical-align: middle; /* This centers the images vertically within the slideshow container */
+    height: auto; /* The height of the images is automatically adjusted based on the content, ie if your images are different sizes, they will display as different sizes */
+    box-shadow: 10px 15px rgba(8, 33, 44, 0.582); /* Adds a shadow around the slideshow images */
+    border-radius: 25px;
+    width: 25%; /* The width of the images is automatically adjusted based on the content */
+}
+
+/* Styling of the dots under the slideshow */
+.dot {
+    cursor: pointer; /* The cursor changes to pointer when hovered over the dots */
+    height: 1vw; /* The dots are sized relative to the viewport width */
+    width: 1vw;
+    margin: .25vw; /* adds additional spacing between the dots */ 
+    background-color: rgb(23, 197, 197); /* dot color */
+    border-radius: 50%; /* Makes the dots circles by rounding each corner */
+    display: inline-block; /* Allows the dots to sit next to eachother rather than on a new line */
+    transition: background-color 0.6s ease; /* When clicked on the dots transition to a different color when clicked or hovered over (the affect is defined below) */
+    z-index: 1; /* This ensures the dots will be displayed above any other elements */
+}
+
+/* Hover effect for slideshow dots */
+.active, .dot:hover {
+    background-color: rgb(241, 167, 30); /* Sets the color of the dots when active or hovered over */
+}
+
+/* Fading animation for slideshow */
+.fade {
+    animation-name: fade; /* Fade animation is defined below */
+    animation-duration: 1.5s; /* The animation lasts 1.5 seconds */
+    -webkit-animation-name: fade; /* Same as above for Safari 4.0-8.0 */
+    -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4;} /* Image starts transparent */
+    to {opacity: 1;} /* Image ends opaque */
+}
+
+@keyframes fade {
+    from {opacity: .4;} /* Image starts transparent */
+    to {opacity: 1;} /* Image ends opaque */
+}
+/***** End Slideshow Styling *****/
 
 /*===============================================
             Contact
@@ -303,6 +413,7 @@ input[type=submit]:hover {
 
 iframe {
     border-radius: 15px;
+    box-shadow: 8px 15px rgba(0, 0, 0, 0.445);
 }
 
 /* =====================================================

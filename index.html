@@ -28,14 +28,11 @@
         </li>
         <li class="nbli">
             <a class="nbactive" href="#git">GitHub</a>
-        </li>
-        <li class="nbli">
-            <a class="nbactive" onclick="openForm()">Contact</a>
-        </li>
+        </li>       
         <li class="nbli">
             <a class="nbactive" href="#extra">Extra</a>
-        </li>
-    </ul>             
+        </li>         
+    </ul> 
     <!-- End NavBar -->
 
       <!-- Home -->
@@ -48,12 +45,50 @@
       </div>
       <!-- End Home -->
 
-      <!-- GitHub -->
+      
       <section>
         <div class="container">
           <div class="center">
-            <h1>About</h1>
-          </div>       
+            <h1>About Me</h1>
+      <!-- Slideshow -->
+            <div id="Slideshow">
+              <div id="Slideshow_Background">
+                <div id="Slideshow_container">
+                  <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="media/stalegap.jpg" alt="rip">
+                  </div>        
+                  <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="media/fbkink.jpg" alt="kink">
+                  </div>                      
+                  <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="media/lofarrblunt.jpg" alt="Sk8r boi">
+                  </div>
+                  <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="media/back3.jpg" atl="spin to win">
+                  </div>
+                  <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="media/bavaria.jpg" alt="Bavaria">
+                  </div>                   
+                </div>
+                <br> 
+                <!-- Slideshow dots -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span>                    
+                </div>
+            </div>
+          </div>
+        </div>
+        <br><br>
+      </section>
+      <!-- End Slideshow -->
+
+      <!-- GitHub -->
+      <section>
+        <div class="container">         
           <div class="row">          
             <div id="git" class="column">
               <div class="gitBox">            
@@ -68,15 +103,16 @@
               <div class="center">
                 <h2>Who am I?</h2>
               </div>
-                <br>                
-                <ul>
-                  <li>Comedian</li>                
-                  <li>Business Owner</li>
-                  <li>Kettlebell Enthusiast</li>
-                  <li>Poodleman</li>
-                  <li>Future Programer</li>
-                </ul>              
-            </div>
+                <br>                               
+              <ul>
+                <li>Comedian</li>                
+                <li><a class="aboutStyle" href="https://facebook.com/nebulacreativeutah">Business Owner</a></li>
+                <li>Kettlebell Enthusiast</li>
+                <li><a class="aboutStyle" href="https://doggydarlins.com">Poodleman</a></li>
+                <li>Future Programer</li>
+              </ul>               
+          </div> 
+        </div>                         
       </section>
       <br>
       <!-- End About -->
