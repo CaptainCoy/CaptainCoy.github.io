@@ -19,16 +19,10 @@ document.addEventListener("click", function(event){
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// This function changes the slide when the left or right arrows are clicked
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
 // This function changes the slide when the dots are clicked
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
-
 
 function showSlides(n) {
     var slides = document.getElementsByClassName("mySlides"); // This takes all elements with the class name "mySlides" and stores them in the variable array "slides"
